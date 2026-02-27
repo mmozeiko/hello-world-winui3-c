@@ -79,6 +79,7 @@ typedef struct MyApplication {
     // members
     __x_ABI_CMicrosoft_CUI_CXaml_CXamlTypeInfo_CIXamlControlsXamlMetaDataProvider* metadata;
     __x_ABI_CMicrosoft_CUI_CXaml_CIApplication* instance;
+    IInspectable* inner;
     LONG refs;
 } MyApplication;
 
@@ -175,6 +176,10 @@ static HRESULT MyApplication_IApplicationOverrides_QueryInterface(__x_ABI_CMicro
         *ppvObject = app->metadata;
         return S_OK;
     }
+    if (app->inner)
+    {
+        return app->inner->lpVtbl->QueryInterface(app->inner, riid, ppvObject);
+    }
 
     return E_NOINTERFACE;
 }
@@ -189,10 +194,13 @@ static UINT MyApplication_IApplicationOverrides_Release(__x_ABI_CMicrosoft_CUI_C
 {
     MyApplication* app = CONTAINING_RECORD(this, MyApplication, overrides);
     LONG refs = InterlockedDecrement(&app->refs);
-    if (refs == 0)
+
+    // if only 2 references left, that is instance & inner members
+    if (refs == 2)
     {
         app->metadata->lpVtbl->Release(app->metadata);
         app->instance->lpVtbl->Release(app->instance);
+        app->inner->lpVtbl->Release(app->inner);
         free(this);
     }
     return refs;
@@ -554,8 +562,7 @@ static HRESULT MyApplicationInitializationCallback_Invoke(__x_ABI_CMicrosoft_CUI
     application->refs = 1;
 
     // a bit of hack, but cast to IInspectable* below works because MyAppication implements IApplicationOverrides which implements IInspectable
-    IInspectable* inner;
-    hr = application_factory->lpVtbl->CreateInstance(application_factory, (IInspectable*)application, &inner, &application->instance);
+    hr = application_factory->lpVtbl->CreateInstance(application_factory, (IInspectable*)application, &application->inner, &application->instance);
     AssertHR(hr);
 
     IActivationFactory* metadata_factory;
@@ -569,9 +576,6 @@ static HRESULT MyApplicationInitializationCallback_Invoke(__x_ABI_CMicrosoft_CUI
 
     hr = instance->lpVtbl->QueryInterface(instance, &IID_IXamlMetadataProvider, &application->metadata);
     AssertHR(hr);
-
-    // what to do with this object??
-    //inner->lpVtbl->Release(inner);
 
     instance->lpVtbl->Release(instance);
     metadata_factory->lpVtbl->Release(metadata_factory);
