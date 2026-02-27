@@ -1,0 +1,6 @@
+packages
+idl
+includes
+output
+.vs
+*.obj

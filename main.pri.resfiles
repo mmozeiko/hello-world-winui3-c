@@ -1,0 +1,3 @@
+packages\runtimes-framework\win-x64\native\Microsoft.UI.pri
+packages\runtimes-framework\win-x64\native\Microsoft.UI.Xaml.Controls.pri
+packages\runtimes-framework\win-x64\native\Microsoft.WindowsAppRuntime.pri

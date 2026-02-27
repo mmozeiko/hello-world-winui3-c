@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:winrtv1="urn:schemas-microsoft-com:winrt.v1" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <asmv3:file name="Microsoft.Windows.ApplicationModel.Resources.dll">
+        <winrtv1:activatableClass name="Microsoft.Windows.ApplicationModel.Resources.ResourceManager" threadingModel="both"></winrtv1:activatableClass>
+    </asmv3:file>
+    <asmv3:file name="CoreMessagingXP.dll">
+        <winrtv1:activatableClass name="Microsoft.UI.Dispatching.DispatcherQueue" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Dispatching.DispatcherQueueController" threadingModel="both"></winrtv1:activatableClass>
+    </asmv3:file>
+    <asmv3:file name="dcompi.dll">
+        <winrtv1:activatableClass name="Microsoft.UI.Composition.CompositionEasingFunction" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Composition.Compositor" threadingModel="both"></winrtv1:activatableClass>
+    </asmv3:file>
+    <asmv3:file name="Microsoft.UI.Input.dll">
+        <winrtv1:activatableClass name="Microsoft.UI.Content.ContentIsland" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Content.DesktopChildSiteBridge" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Input.DragDrop.DragDropManager" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Input.FocusNavigationRequest" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Input.GestureRecognizer" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Input.InputActivationListener" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Input.InputFocusController" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Input.InputKeyboardSource" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Input.InputNonClientPointerSource" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Input.InputPreTranslateKeyboardSource" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Input.InputPointerSource" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Input.InputSystemCursor" threadingModel="both"></winrtv1:activatableClass>
+    </asmv3:file>
+    <asmv3:file name="Microsoft.UI.Windowing.dll">
+        <winrtv1:activatableClass name="Microsoft.UI.Windowing.AppWindow" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Windowing.DisplayArea" threadingModel="both"></winrtv1:activatableClass>
+    </asmv3:file>
+    <asmv3:file name="Microsoft.UI.Xaml.dll">
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Application" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Controls.Button" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Controls.Grid" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Controls.StackPanel" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Controls.TextBlock" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Hosting.WindowsXamlManager" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Hosting.XamlSourceFocusNavigationRequest" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Markup.XamlBindingHelper" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Markup.XamlReader" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.ThicknessHelper" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Window" threadingModel="both"></winrtv1:activatableClass>
+    </asmv3:file>
+    <asmv3:file name="Microsoft.UI.Xaml.Controls.dll">
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.Controls.XamlControlsResources" threadingModel="both"></winrtv1:activatableClass>
+        <winrtv1:activatableClass name="Microsoft.UI.Xaml.XamlTypeInfo.XamlControlsXamlMetaDataProvider" threadingModel="both"></winrtv1:activatableClass>
+    </asmv3:file>
+</assembly>
